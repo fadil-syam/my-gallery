@@ -1,26 +1,30 @@
-const details = document.querySelector('.ddil')
+const body = document.querySelector('body');
+const container = document.querySelector('.thumbContainer');
+const containerChild = document.querySelector('.containerChild');
+const parentThumb = document.querySelector('.parentThumb')
 
-const container = document.querySelector('.container');
+const parentPic = document.querySelector('.parents');
 
-const hello = document.querySelector('.hello');
-const aKosong = document.querySelector('.aKosong');
-const divKosong = document.querySelector('.divKosong');
+let thumbnail = document.querySelectorAll('.thumbnail');
+let thumb = document.querySelectorAll('.thumb');
 
-details.addEventListener('click', function () {
-    hello.classList.toggle('percobaan')
+body.addEventListener('click', function(e) {
+    if(e.target.className == 'thumbnail') {
+        parentPic.src = e.target.src; 
+        parentPic.classList.add('fade');
+        container.classList.toggle('hidden');
+        parentThumb.classList.toggle('hidden')
 
-    aKosong.classList.toggle('aKosong-toggle')
+        setTimeout(function() {
+            parentPic.classList.remove('fade');
+        }, 500);
 
-    divKosong.classList.toggle('divKosong-toggle')
+        thumbnail.forEach(function(thumbnail) {
 
-    container.classList.toggle("hidden")
+            thumbnail.className = 'thumbnail';
 
-});
+        });
 
-const details2 = document.querySelector('.ddil2')
-const kosong2 = document.querySelector('.kosong2')
-
-details2.addEventListener('click', function (e) {
-    kosong2.classList.toggle('hidden');
-    container.classList.toggle("hidden")
+        e.target.classList.add('active');
+    }
 })

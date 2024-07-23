@@ -14,149 +14,169 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="src/output.css">
+    <style type="text/tailwindcss">
+
+    .thumbnail {
+      @apply w-full h-full bg-cover bg-center rounded-lg
+    }
+    .thumb {
+      @apply w-full h-full bg-cover bg-center rounded-lg
+    }
+
+    .thumbnail:hover {
+        @apply opacity-50 cursor-pointer
+    }
+    .thumb:hover {
+        @apply opacity-50 cursor-pointer
+    }
+    
+    @keyframes fadeIn {
+        to { 
+            opacity: 1;
+        }
+    }
+    .fade {
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+        /* @apply opacity-0 animate-[none] */
+    }
+
+    .active {
+      @apply opacity-[0.5];
+        /* opacity: 0.5; */
+    }
+
+    </style>
 
 </head>
 <body class="bg-amber-50">
 
-    <!-- <div class="grid grid-cols-2 gap-4 place-content-center h-48 ...">
-        <div>01</div>
-        <div>02</div>
-        <div>03</div>
-        <div>04</div>
-      </div> -->
-    <!-- <div class="kosong2  w-full h-screen border-4 auto-cols-max">
-        <p class="w-full ">Lorem ipsum dolor sit amet.</p>
-        <div class="content w-full h-full border-4 grid grid-cols-2 gap-4 place-content-center">
-            <div class="  px-4 w-1/2 " >
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, suscipit ratione facilis eaque saepe facere ab maiores dignissimos natus rerum.</p>
-            </div>
-            <div class="  px-4 w-1/2 ">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quod!</p>
-    
-            </div>
-        </div>
-        <p class="w-full ">Lorem ipsum dolor sit amet.</p>
-
-    </div> -->
-    <!-- <div class="kosong2  w-full h-screen border-4 grid place-content-center">
-        <p class="w-full ">Lorem ipsum dolor sit amet.</p>
-        <div class="  px-4 w-1/2 " >
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, suscipit ratione facilis eaque saepe facere ab maiores dignissimos natus rerum.</p>
-        </div>
-        <div class="  px-4 w-1/2 ">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, quod!</p>
-
-        </div>
-     
-        <p class="w-full ">Lorem ipsum dolor sit amet.</p>
-
-    </div> -->
-    <!-- <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-        <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#14b8a6" d="M64.3,-26C71.1,-0.1,55.8,27.8,33.2,43.8C10.7,59.7,-19.2,63.6,-36.2,51C-53.2,38.3,-57.4,9.2,-49.2,-18.7C-41.1,-46.5,-20.5,-73,4.1,-74.3C28.8,-75.7,57.6,-51.9,64.3,-26Z" transform="translate(100 100) scale(1.1)" />
-        </svg>
-    </span> -->
-
-    <div class="kosong2 w-full h-screen flex flex-col px-10">
-        <div class="self-end me-11">
-            <div class="box h-20 bg-[url('src/img/2.avif')] bg-bottom w-44"></div>
-        </div>
-        
-        <div class="grid  gap-0 place-content-center w-full h-screen">
-            <div class="absolute">
-                <p class="">No</p>
-                <p class="">Invisible</p>
-            </div>
-            <div class="flex">
-                <div class="relative z-10 ">
+    <div class="parentThumb hidden  w-full h-screen flex flex-col px-10 md:px-16 ">
                 
-                    <p class="pe-40">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, suscipit ratione facilis eaque saepe facere ab maiores dignissimos natus rerum.</p>
-                    <div class="pt-5 "><span class="hidden">sdkjf</span></div>
-                    <p><-</p>
+            <div class="grid grid-cols-2 me-11">
+                <div class=""></div>
+                <span class="self-center">
+                    <div class="box ms-auto h-14 bg-[url('src/img/2.avif')] bg-bottom w-44 rounded-b-lg opacity-10 sm:mx-auto sm:w-full"></div>
+                </span>
+            </div>
+            
+            <div class="grid  gap-0 grid-cols-3  w-full h-screen  ">
+                <div class="grid ">
+                    <span class="row-start-1">
+                        <p class=" sm:text-sky-500 md:text-pink-300 lg:text-green-500 xl:text-red-500">No</p>
+                        <p class="text-4xl font-bold">Invisible</p>
+
+                    </span>
+                    <span class="place-content-center">
+                        <span class="absolute sm:static">
+                            <p class="-translate-y-full me-32 sm:translate-y-0 sm:me-0 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, suscipit ratione facilis eaque saepe facere ab maiores dignissimos natus rerum.</p>
+                        </span>
+                        <div class=""><span class="">dd</span></div>
+                    </span>
+                    <span class="lg:max-h-14 lg:-translate-y-5">
+                        <p class="">view moore</p>
+                        <a href="" class=""><-----</a>
+                    </span>
+                    <span class="">
+                        <span class="hidden lg:grid grid-cols-4 h-40 w-56  -translate-y-16 absolute  ">
+                            <div class="m-[0.10rem] overflow-hidden ">
+                                <!-- <div class=" w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:opacity-60"></div> -->
+                                <img src="src/img/img/6.jpg" id="1" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-3">
+                                <img src="src/img/img/5.jpg" id="2" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden">
+                                <img src="src/img/img/4.jpg" id="3" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden">
+                                <img src="src/img/img/3.jpg" id="4" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-3">
+                                <img src="src/img/img/2.jpg" id="5" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-2">
+                                <img src="src/img/img/1.jpg" id="6" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-4">
+                                <img src="src/img/img/6.jpg" id="7" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden">
+                                <img src="src/img/img/5.jpg" id="8" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-3">
+                                <img src="src/img/img/4.jpg" id="9" class="thumbnail">
+                            </div>
+                            <div class="m-[0.10rem] overflow-hidden col-start-3">
+                                <img src="src/img/img/3.jpg" id="10" class="thumbnail">
+                            </div>
+                        </span>
+                    </span>
                 </div>
-                <span class="absolute left-1/2 -translate-x-1/4 ">
-                    <img src="src/img/2.avif" class="h-full" alt="">
+                <div class="singleThumb col-span-2 place-content-center lg:ms-14">
+                    <span class=" place-content-center  ">
+                        <img src="src/img/2.avif" class="parents rounded-2xl w-full max-h-44 object-cover sm:max-h-full sm:w-full sm:object-cover  sm:static md:max-h-80 md:w-full lg:max-h-96 lg:w-full" alt="">
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-2 me-11">
+                <p class="self-center "><a href="" class="hidden"><-----</a></p>
+                <span class=" self-center">
+                    <div class="box ms-auto h-14 bg-[url('src/img/2.avif')] bg-bottom w-44 rounded-t-lg opacity-10 sm:mx-auto sm:w-full "></div>
                 </span>
             </div>
 
         </div>
-        <!-- <div class="border-4 gap-0 place-content-center w-full h-screen">
-            <div class=" mb-10">
-                <p class="">No</p>
-                <p class="">Invisible</p>
-            </div>
-            <div class="flex h-full">
-                <p class="relative z-10 pe-40 border-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, suscipit ratione facilis eaque saepe facere ab maiores dignissimos natus rerum.</p>
-                
-                <span class="absolute  left-1/2 -translate-x-1/4">
-                    <img src="src/img/2.avif" class="w-full" alt="">
-                </span>
-                
-            </div>
 
-        </div> -->
-
-        <div class="self-end me-11">
-            <div class="box h-20 bg-[url('src/img/2.avif')] bg-bottom w-44"></div>
-        </div>
-
-    </div>
-
-
-    <div class="aKosong ">
-        <div class="divKosong"></div>
-        <div class="hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, nulla?</div>
-    </div>
-
-    <div class="container hidden">
-    
-        <div class="grid grid-cols-2 m-1 mb-96 md:grid-cols-4 ">
-            <h2 class="h-32 flex flex-col m-1 md:col-start-4 md:row-start-2">
-                <span>welcome to my</span>
+    <!-- <img src="src/img/img/1.jpg" class="parents h-full w-full object-cover " alt=""> -->
+    <div class="container thumbContainer">
+        <div class="containerChild grid grid-cols-2  border-4 w-full absolute md:grid-cols-4">
+            <h2 class="h-32 flex flex-col m-1 border-4 md:col-start-4 md:row-start-2 sm:h-[11.3rem]">
+                <span class="sm:text-sky-500 md:text-green-500 lg:text-pink-500 xl:text-red-500">welcome to my</span>
                 <span><a href="">article</a></span>
                 <span><a href="">demo</a></span>
                 <span><a href="">github</a></span>
             </h2>
-    
-            <p class="h-32 m-1 md:col-start-2 md:row-start-2"><a href="">@alfadil</a></p>
-    
-            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] details">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000 details"></div>
+            <p class="h-32 m-1 sm:h-[11.3rem] md:col-start-2 md:row-start-2"><a href="">@alfadil</a></p>
+
+            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] details border-4">
+                <!-- <img src="src/img/img/6.jpg" class="thumbnail w-full h-full bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000 details sm:w-full"> -->
+                <img src="src/img/img/6.jpg" id="1" class="thumbnail">
             </a>
-            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-3">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
-            </a>
-            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] ">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-3 details border-4">
+                <img src="src/img/img/5.jpg" id="2" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] ">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/4.jpg" id="3" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] ">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/3.jpg" id="4" class="thumbnail">
+            </a>
+            <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] ">
+                <img src="src/img/img/2.jpg" id="5" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-2">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/1.jpg" id="6" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-4">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/6.jpg" id="7" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] ">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/5.jpg" id="8" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-3">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/4.jpg" id="9" class="thumbnail">
             </a>
             <a href="#" class="box-border h-40 bg-sky-500 rounded-lg m-1 overflow-hidden sm:h-[11.3rem] md:col-start-3">
-                <div class="w-full h-full bg-[url('src/img/2.avif')] bg-cover bg-center rounded-lg hover:scale-125 transition-all duration-1000"></div>
+                <img src="src/img/img/3.jpg" id="10" class="thumbnail">
             </a>
-            
-        </div>
-    
-        <div class="ddil2 box-border h-40 w-40 bg-pink-500"></div>
-        <div class="ddil box-border h-40 w-40 bg-sky-500"></div>
-        <!-- <button class="hello ">hello</button> -->
-        
+
+        </div>        
+        <!--  -->
+
+    <!--  -->
     </div>
     
 
